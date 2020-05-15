@@ -7,7 +7,13 @@ const port = process.env.PORT || 5000;
 app.use(bodyParser.json()); // needed for angular requests
 app.use(express.static('build'));
 
+
+//require routers
+const moviesRouter = require('./routes/movies.router');
+
 /** ---------- ROUTES ---------- **/
+//GET
+app.use('/movies', moviesRouter);
 
 
 /** ---------- START SERVER ---------- **/

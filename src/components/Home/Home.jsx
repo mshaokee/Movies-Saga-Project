@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 // import {Link} from 'react-router-dom';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 class Home extends Component {
 
     componentDidMount() {
         console.log('Home mounted');
-
+        //display database images and description from redux-saga
+        // this.props.dispatch({
+        //     type: 'GET_MOVIES'
+        // });
     };//end componentDidMount
 
     render() {
@@ -19,8 +22,7 @@ class Home extends Component {
     };//end render
 };//end class
 
-export default Home;
-
-// const putStateOnProps = reduxState => ({reduxState});
+//need reduxState to display on DOM
+const putStateOnProps = reduxState => ({reduxState});
 //connect
-// export default connect()(Home);
+export default connect(putStateOnProps)(Home);

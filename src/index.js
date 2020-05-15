@@ -22,8 +22,10 @@ function* rootSaga() {
 function* fetchMovies(action){
     console.log('-----------> in fetchMovies');
     try {
+        //retrieve data from /movies route
         const response = yield axios.get('/movies')
         console.log('in fetchMovies');
+        //send data to our movies reducer
         yield put({
             type: 'SET_MOVIES',
             payload: response.data

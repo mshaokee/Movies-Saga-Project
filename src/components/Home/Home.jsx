@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import {Link} from 'react-router-dom';
 import { connect } from 'react-redux';
+import SpecificMovie from '../SpecificMovie/SpecificMovie';
 
 class Home extends Component {
 
@@ -15,9 +16,14 @@ class Home extends Component {
     render() {
         return (
             <>
+            {/* Map through images */}
             {/* DISPLAY IMAGE / DESCRIPTION / IMAGE WILL LINK TO DETAILS */}
                 <h1>Home</h1>
-                <p>{JSON.stringify(this.props.reduxState)}</p>
+                {this.props.reduxState.movies.map((movie, index) => 
+                <div key={index}>
+                    <SpecificMovie movie={movie}/>
+                </div>
+                )};
             </>
         );//end return
     };//end render

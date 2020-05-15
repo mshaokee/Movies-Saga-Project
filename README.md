@@ -1,9 +1,15 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Movie Sagas Project!
 
 ## Description
+[x] npm install
+[x] npm install react-router-dom
+[x] npm install dotenv
 
-Your project description goes here. What problem did you solve? How did you solve it?
+[x] set up database with junction table
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+[x] App, import HashRouter, Route, Link
+[x] App, import connect
+
+[ ] create Header component
+[ ] create Details component
+[ ] create Edit component

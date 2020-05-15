@@ -26,7 +26,7 @@ const movies = (state = [], action) => {
         default:
             return state;
     }
-}
+};//end movies
 
 // Used to store the movie genres
 const genres = (state = [], action) => {
@@ -36,7 +36,7 @@ const genres = (state = [], action) => {
         default:
             return state;
     }
-}
+};//end genres
 
 // Create one store that all components can use
 const storeInstance = createStore(
@@ -51,6 +51,10 @@ const storeInstance = createStore(
 // Pass rootSaga into our sagaMiddleware
 sagaMiddleware.run(rootSaga);
 
-ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, 
+ReactDOM.render(
+<Provider store={storeInstance}>
+    <App />
+</Provider>,
     document.getElementById('root'));
+    
 registerServiceWorker();

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 class SpecificMovie extends Component {
 
     componentDidMount() {
-        console.log('SpecificMovie mounted', this.props.movie);
-
+        console.log('SpecificMovie mounted');
     };//end componentDidMount
 
     render() {
@@ -13,7 +12,7 @@ class SpecificMovie extends Component {
                 {/* Display movie title, image poster, alt description */}
                 <div>
                     <h3>{this.props.movie.title}</h3>
-                    <img src={this.props.movie.poster} alt={this.props.movie.description}></img>
+                    <Link to="/details"><img src={this.props.movie.poster} alt={this.props.movie.description}></img></Link>
                     <p>{this.props.movie.description}</p>
                 </div>
             </>

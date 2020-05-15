@@ -7,9 +7,9 @@ class Home extends Component {
     componentDidMount() {
         console.log('Home mounted');
         //display database images and description from redux-saga
-        // this.props.dispatch({
-        //     type: 'GET_MOVIES'
-        // });
+        this.props.dispatch({
+            type: 'GET_MOVIES'
+        });
     };//end componentDidMount
 
     render() {
@@ -17,6 +17,7 @@ class Home extends Component {
             <>
             {/* DISPLAY IMAGE / DESCRIPTION / IMAGE WILL LINK TO DETAILS */}
                 <h1>Home</h1>
+                <p>{JSON.stringify(this.props.reduxState)}</p>
             </>
         );//end return
     };//end render

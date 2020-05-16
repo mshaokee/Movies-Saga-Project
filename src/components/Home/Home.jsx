@@ -10,6 +10,10 @@ class Home extends Component {
         this.props.dispatch({
             type: 'GET_MOVIES'
         });
+        //display genres on home load
+        this.props.dispatch({
+            type: 'GET_GENRES'
+        })
     };//end componentDidMount
 
     render() {

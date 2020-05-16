@@ -12,8 +12,10 @@ app.use(express.static('build'));
 const moviesRouter = require('./routes/movies.router');
 
 /** ---------- ROUTES ---------- **/
-//GET
+//movies router
 app.use('/movies', moviesRouter);
+//genres router
+app.use('/genres', genresRouter);
 
 
 /** ---------- START SERVER ---------- **/

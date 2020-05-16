@@ -57,13 +57,13 @@ function* getGenres(action){
     try {
         //get information from get server
         const response = yield axios.get('/genres');
-        console.log('IN GET GENRES ---:', response.data);
-        
-    } catch (err) {
+        //response.data will have all of the table columns from postico
+        console.log('IN GET GENRES ---:', response.data); 
         yield put({
             type: 'SET_GENRES',
             payload: response.data
         })
+    } catch (err) {
         console.log('Error getGenres generator', err);
     }
 };//end getGenres

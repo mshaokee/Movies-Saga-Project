@@ -20,7 +20,7 @@ class Details extends Component {
                 <h1>Details</h1>
                 {/* TEST WITH JSON */}
                 {/* {JSON.stringify(this.props.reduxState.selectMovie)} */}
-                {/* {JSON.stringify(this.props.reduxState)} */}
+                {JSON.stringify(this.props.reduxState.genres)}
                 <h1>NAME: {this.props.reduxState.selectMovie.title}</h1>
                 <p>DESCRIPTION: {this.props.reduxState.selectMovie.description}</p>
                 <Link to="/"><button>Back to Movie List</button></Link>

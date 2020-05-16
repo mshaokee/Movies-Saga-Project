@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     JOIN relate ON genres.id = relate.genres_id
     JOIN movies ON movies.id = relate.movies_id;`
     pool.query(queryString).then((result)=> {
-        res.sendStatus(result.rows);
+        res.send(result.rows);
     }).catch((err)=> {
         alert('Error on get genres router. Check console.');
         console.log(err);

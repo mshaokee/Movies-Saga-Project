@@ -11,7 +11,7 @@ class MovieGenres extends Component {
     render() {
         return (
             <>
-                <h1>MovieGenres</h1>
+                <li>{this.props.movieGenre.genrename}</li>
             </>
         );//end return
     };//end render

@@ -16,6 +16,7 @@ import createSagaMiddleware from 'redux-saga';
 function* rootSaga() {
     //intercept data then send to reducer
     yield takeEvery('GET_MOVIES', fetchMovies)
+    yield takEvery('PUT_MOVIES', editMovies)
 }
 
 //generators
@@ -34,6 +35,11 @@ function* fetchMovies(action){
         console.log(err);
     };//end try
 };//end fetchMovies
+
+function* editMovies(action){
+    console.log('----------in editMovies');
+    
+};//end editMovies
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();

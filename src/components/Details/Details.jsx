@@ -6,23 +6,26 @@ class Details extends Component {
     componentDidMount() {
         console.log('Details mounted:', this.props.reduxState.movies);
         this.props.dispatch({
-            type: 'GET_MOVIES'
+            type: 'PUT_MOVIES'
         })
     };//end componentDidMount
-    
+
     //if statement
 
     render() {
-        
+
         return (
             <>
                 <h1>Details</h1>
                 <div>
-                    {this.props.reduxState.movies.map((movie, index)=>{
-                    return(
-                        <p key={index}>{movie.description}</p>
-                    )
-                })}
+                    {this.props.reduxState.movies.map((movie, index) => {
+                        return (
+                            <div>
+                                <h1 key={index}>{movie.title}</h1>
+                                <p key={index}>{movie.description}</p>
+                            </div>
+                        )
+                    })}
                 </div>
             </>
         );//end return
@@ -31,6 +34,6 @@ class Details extends Component {
 
 
 
-const putStateOnProps = reduxState => ({reduxState});
+const putStateOnProps = reduxState => ({ reduxState });
 //connect
 export default connect(putStateOnProps)(Details);

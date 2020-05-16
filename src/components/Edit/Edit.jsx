@@ -1,24 +1,28 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 
 class Edit extends Component {
 
     componentDidMount() {
-        console.log('Edit mounted');
-
+        console.log('Edit mounted', this.props.reduxState.selectMovie);
     };//end componentDidMount
 
     render() {
         return (
             <>
-                <h1>Edit</h1>
+                <div>
+                    <input type="text" placeholder={this.props.reduxState.selectMovie.title}/>
+                </div>
+                <div>
+                    <input type="text" placeholder={this.props.reduxState.selectMovie.description} />
+                </div>
+
             </>
         );//end return
     };//end render
 };//end class
 
-export default Edit;
 
-// const putStateOnProps = reduxState => ({reduxState});
+const putStateOnProps = reduxState => ({ reduxState });
 //connect
-// export default connect()(Edit);
+export default connect(putStateOnProps)(Edit);

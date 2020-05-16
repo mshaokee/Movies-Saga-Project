@@ -29,8 +29,8 @@ class SpecificMovie extends Component {
                     <Link to="/details"><img
                         onClick={this.handleClick}
                         src={this.props.movie.poster}
-                        alt={this.props.movie.description}>
-                    </img></Link>
+                        alt={this.props.movie.description}/>
+                    </Link>
                     <p>{this.props.movie.description}</p>
                 </div>
             </>

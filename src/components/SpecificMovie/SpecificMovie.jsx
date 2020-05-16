@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 class SpecificMovie extends Component {
 
-    // state = {
-    //     movie: ''
-    // };
-
     componentDidMount() {
         console.log('SpecificMovie mounted');
     };//end componentDidMount
@@ -20,7 +16,7 @@ class SpecificMovie extends Component {
     };//end handleClick
 
     render() {
-        // let video = this.props.movie
+       
         return (
             <>
                 {/* Display movie title, image poster, alt description */}

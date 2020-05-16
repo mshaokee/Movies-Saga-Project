@@ -17,6 +17,7 @@ function* rootSaga() {
     //intercept data then send to reducer
     yield takeEvery('GET_MOVIES', fetchMovies)
     yield takeEvery('EDIT_MOVIES', editMovies)
+    yield takeEvery('GET_GENRES', getGenres)
 }
 
 //generators
@@ -51,6 +52,11 @@ function* editMovies(action){
     }
 };//end editMovies
 
+function* getGenres(action){
+    console.log('-----------in getGenres');
+    
+};//end getGenres
+
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
 
@@ -83,11 +89,6 @@ const selectMovie = (state = [], action) => {
     }
     return state;
 };//end currentMovie
-
-// const updateMovie = (state = 0, action) => {
-//     console.log('in updateMovie');
-    
-// };//end updateMovie
 
 // Create one store that all components can use
 const storeInstance = createStore(

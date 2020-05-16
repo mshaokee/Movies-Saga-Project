@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 class Edit extends Component {
 
@@ -55,6 +56,7 @@ class Edit extends Component {
                         defaultValue={this.props.reduxState.selectMovie.description}
                     />
                 </div>
+                <Link to="/details"><button>CANCEL</button></Link>
                 <button onClick={this.submit}>SUBMIT CHANGES</button>
             </>
         );//end return

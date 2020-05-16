@@ -16,7 +16,7 @@ import createSagaMiddleware from 'redux-saga';
 function* rootSaga() {
     //intercept data then send to reducer
     yield takeEvery('GET_MOVIES', fetchMovies)
-    yield takEvery('PUT_MOVIES', editMovies)
+    // yield takeEvery('EDIT_MOVIES', editMovies)
 }
 
 //generators
@@ -36,10 +36,14 @@ function* fetchMovies(action){
     };//end try
 };//end fetchMovies
 
-function* editMovies(action){
-    console.log('----------in editMovies');
-    
-};//end editMovies
+// function* editMovies(action){
+//     console.log('----------in editMovies');
+//     try {
+//         //retrieve data from /movies route
+//     } catch (err) {
+//         console.log('Error editMovies generator', err);
+//     }
+// };//end editMovies
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
@@ -64,11 +68,22 @@ const genres = (state = [], action) => {
     }
 };//end genres
 
+
+// Used to put selected movie in display
+const selectMovie = (state = [], action) => {
+    console.log('in currentMovie reducer', action.payload);
+    if (action.type === 'current_movie'){
+        return state;
+    }
+    return state;
+};//end currentMovie
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        selectMovie
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),

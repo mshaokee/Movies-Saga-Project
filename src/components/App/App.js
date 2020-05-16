@@ -11,7 +11,6 @@ class App extends Component {
 
   componentDidMount() {
     console.log('App Mounted');
-
   };//end componentDidMount
 
   // Renders the entire app on the DOM

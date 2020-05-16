@@ -12,7 +12,10 @@ class SpecificMovie extends Component {
                 {/* Display movie title, image poster, alt description */}
                 <div>
                     <h3>{this.props.movie.title}</h3>
-                    <Link to="/details"><img src={this.props.movie.poster} alt={this.props.movie.description}></img></Link>
+                    <Link to="/details"><img
+                        src={this.props.movie.poster}
+                        alt={this.props.movie.description}>
+                    </img></Link>
                     <p>{this.props.movie.description}</p>
                 </div>
             </>

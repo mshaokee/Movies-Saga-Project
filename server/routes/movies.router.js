@@ -7,7 +7,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
     //get all movies and descriptions and titles
     console.log('in /movies GET');
-    let queryString = 'SELECT "title", "poster", "description" FROM "movies";';
+    let queryString = 'SELECT "id", "title", "poster", "description" FROM "movies";';
     pool.query(queryString).then((result) => {
         res.send(result.rows);
     }).catch((err) => {

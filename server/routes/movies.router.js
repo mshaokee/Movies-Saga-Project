@@ -19,7 +19,24 @@ router.get('/', (req, res) => {
 
 //PUT ROUTER
 router.put('/:id', (req, res) => {
+    //req.params.id will be the specified movie id, will change through SQL!
+    //req.body is a object!
+    let movieId = req.params.id;
+    let movieTitle = req.body.title;
+    let movieDesc = req.body.description;
     console.log('in /movies PUT ----------------', req.body, req.params);
+    //querystring
+    let queryString = `
+    UPDATE "movies" 
+    SET "title" = ($1), "description" = ($2)
+    WHERE "id" = ($3)
+    ;`;
+    pool.query(queryString, [movieTitle, movieDesc, movieId]).then((result) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log(error);
+        alert('Error /movies put router. Check console.');
+    });//end pool query
 });//end put
 
 module.exports = router;

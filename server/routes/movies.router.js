@@ -17,4 +17,9 @@ router.get('/', (req, res) => {
     });//end pool
 });//end GET ROUTER
 
+//PUT ROUTER
+router.put('/:id', (req, res) => {
+    console.log('in /movies PUT ----------------', req.body, req.params);
+});//end put
+
 module.exports = router;

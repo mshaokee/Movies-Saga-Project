@@ -7,9 +7,6 @@ class Details extends Component {
 
     componentDidMount() {
         console.log('---------------Details mounted:');
-        // this.props.dispatch({
-        //     type: 'EDIT_MOVIES'
-        // })
     };//end componentDidMount
 
     //if statement

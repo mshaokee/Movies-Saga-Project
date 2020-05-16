@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 class Edit extends Component {
 
     state = {
+        id: this.props.reduxState.selectMovie.id,
         title: this.props.reduxState.selectMovie.title,
         description: this.props.reduxState.selectMovie.description
     }
@@ -26,12 +27,22 @@ class Edit extends Component {
         })
     };//end changeDesc
 
+    submit = () => {
+        console.log('Submitting from Edit');
+        this.props.dispatch({
+            type: 'EDIT_MOVIES',
+            payload: this.state
+        })
+    };//end submit
+
     render() {
         return (
             <>
                 {/* TEST INPUT CHANGES */}
-                {JSON.stringify(this.state.title)};
-                {JSON.stringify(this.state.description)};
+                {JSON.stringify(this.state.title)}
+                <div>
+                {JSON.stringify(this.state.description)}
+                </div>
                 <div>
                     <input onChange={this.changeTitle}
                         type="text"
@@ -44,6 +55,7 @@ class Edit extends Component {
                         defaultValue={this.props.reduxState.selectMovie.description}
                     />
                 </div>
+                <button onClick={this.submit}>SUBMIT CHANGES</button>
             </>
         );//end return
     };//end render

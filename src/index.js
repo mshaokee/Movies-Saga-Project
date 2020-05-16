@@ -72,8 +72,9 @@ const genres = (state = [], action) => {
 // Used to put selected movie in display
 const selectMovie = (state = [], action) => {
     console.log('in currentMovie reducer', action.payload);
+    // if statement to select specific movies, return movie data
     if (action.type === 'current_movie'){
-        return state;
+        return action.payload;
     }
     return state;
 };//end currentMovie

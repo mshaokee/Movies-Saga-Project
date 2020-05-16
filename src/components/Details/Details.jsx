@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+
 class Details extends Component {
 
     componentDidMount() {
-        console.log('Details mounted:');
+        console.log('---------------Details mounted:');
         // this.props.dispatch({
         //     type: 'EDIT_MOVIES'
         // })
@@ -17,16 +18,12 @@ class Details extends Component {
         return (
             <>
                 <h1>Details</h1>
-                <div>
-                    {this.props.reduxState.movies.map((movie, index) => {
-                        return (
-                            <div key={ index }>
-                                <h1>{movie.title}</h1>
-                                <p>{movie.description}</p>
-                            </div>
-                        )
-                    })}
-                </div>
+                {/* TEST WITH JSON */}
+                {/* {JSON.stringify(this.props.reduxState.selectMovie)} */}
+                <h1>NAME: {this.props.reduxState.selectMovie.title}</h1>
+                <p>DESCRIPTION: {this.props.reduxState.selectMovie.description}</p>
+
+
             </>
         );//end return
     };//end render

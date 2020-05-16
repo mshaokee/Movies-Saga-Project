@@ -8,7 +8,7 @@ class SpecificMovie extends Component {
     // };
 
     componentDidMount() {
-        console.log('SpecificMovie mounted', this.props.movie.id);
+        console.log('SpecificMovie mounted');
     };//end componentDidMount
 
     handleClick = () => {

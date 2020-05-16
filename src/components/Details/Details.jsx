@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 class Details extends Component {
@@ -22,8 +23,8 @@ class Details extends Component {
                 {/* {JSON.stringify(this.props.reduxState.selectMovie)} */}
                 <h1>NAME: {this.props.reduxState.selectMovie.title}</h1>
                 <p>DESCRIPTION: {this.props.reduxState.selectMovie.description}</p>
-
-
+                <Link to="/"><button>Back to Movie List</button></Link>
+                <Link to="/edit"><button>Edit</button></Link>
             </>
         );//end return
     };//end render

@@ -54,7 +54,18 @@ function* editMovies(action){
 
 function* getGenres(action){
     console.log('-----------in getGenres');
-    
+    try {
+        //get information from get server
+        const response = yield axios.get('/genres');
+        console.log('IN GET GENRES ---:', response.data);
+        
+    } catch (err) {
+        yield put({
+            type: 'SET_GENRES',
+            payload: response.data
+        })
+        console.log('Error getGenres generator', err);
+    }
 };//end getGenres
 
 // Create sagaMiddleware

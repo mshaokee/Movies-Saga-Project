@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core'
+import './Edit.css';
 
 class Edit extends Component {
 
@@ -50,27 +51,31 @@ class Edit extends Component {
 
     render() {
         return (
-            <>
+            <div className="container">
                 {/* TEST INPUT CHANGES */}
-                {JSON.stringify(this.state.title)}
-                <div>
-                {JSON.stringify(this.state.description)}
+                <div className="title">
+                    {JSON.stringify(this.state.title)}
+                    <div>
+                        {JSON.stringify(this.state.description)}
+                    </div>
                 </div>
                 <div>
                     <input onChange={this.changeTitle}
+                        className="input1"
                         type="text"
                         defaultValue={this.props.reduxState.selectMovie.title}
                     />
                 </div>
                 <div>
-                    <input onChange={this.changeDesc}
+                    <textarea onChange={this.changeDesc}
+                        className="input2"
                         type="text"
                         defaultValue={this.props.reduxState.selectMovie.description}
                     />
                 </div>
                 <Link to="/details"><Button>CANCEL</Button></Link>
                 <Link to="/details"><Button onClick={this.submit}>SUBMIT CHANGES</Button></Link>
-            </>
+            </div>
         );//end return
     };//end render
 };//end class

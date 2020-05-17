@@ -1,0 +1,18 @@
+.details {
+    background-color: #fff2e6;
+    height: 100vh;
+    padding: 20px;
+}
+
+.detailsTitle {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.border {
+    margin: 20px;
+    padding: 20px;
+    border: solid 1px;
+    box-shadow: 0px 0px 5px black;
+}

@@ -23,14 +23,14 @@ class SpecificMovie extends Component {
             <>
                 {/* Display movie title, image poster, alt description */}
                 <div className="movies">
-                    <h3>{this.props.movie.title}</h3>
+                    <h3 className="movieTitle">{this.props.movie.title}</h3>
                     <div className="poster">
                     <Link to="/details"><img
                         onClick={this.handleClick}
                         src={this.props.movie.poster}
                         alt={this.props.movie.description}/>
                     </Link>
-                    <div className="edit">EDIT</div>
+                    {/* <div className="edit">EDIT</div> */}
                     </div>
                     <p>{this.props.movie.description}</p>
                 </div>

@@ -1,1 +1,13 @@
+.header {
+    color: #f3e6ff;
+    background-color: #420080;
+    padding: 20px;
+    margin: 0px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.movieList {
+    background-color: #fff2e6;
+    padding: 10px;
+}

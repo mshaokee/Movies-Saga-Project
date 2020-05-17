@@ -13,10 +13,10 @@ class SpecificMovie extends Component {
             type: 'current_movie',
             payload: this.props.movie
         })
-        this.props.dispatch({
-            type: 'current_genres',
-            payload: this.props.reduxState.genres
-        })
+        // this.props.dispatch({
+        //     type: 'current_genres',
+        //     payload: this.props.reduxState.genres
+        // })
     };//end handleClick
 
     render() {
@@ -33,6 +33,7 @@ class SpecificMovie extends Component {
                     </Link>
                     <p>{this.props.movie.description}</p>
                 </div>
+                
             </>
         );//end return
     };//end render

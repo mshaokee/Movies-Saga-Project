@@ -9,6 +9,7 @@ class SpecificMovie extends Component {
 
     handleClick = () => {
         console.log('CLICKED');
+        //send movies back to our saga interceptor
         this.props.dispatch({
             type: 'current_movie',
             payload: this.props.movie
@@ -35,6 +36,7 @@ class SpecificMovie extends Component {
     };//end render
 };//end class
 
+//needed to display and connect to redux
 const putStateOnProps = reduxState => ({ reduxState });
 //connect
 export default connect(putStateOnProps)(SpecificMovie);

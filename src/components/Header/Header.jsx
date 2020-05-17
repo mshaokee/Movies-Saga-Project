@@ -7,15 +7,15 @@ class Header extends Component {
         console.log('Header mounted');
     };//end componentDidMount
 
-    checkRedux = () => {
-        console.log('current reduxState:', this.props.reduxState);
-    };//end checkRedux
+    // checkRedux = () => {
+    //     console.log('current reduxState:', this.props.reduxState);
+    // };//end checkRedux
 
     render(){
         return(
             <div>
             <h1>THE MOVIES</h1>
-            <button onClick={this.checkRedux}>Check Redux</button>
+            {/* <button onClick={this.checkRedux}>Check Redux</button> */}
             </div>
         );//end return
     };//end render

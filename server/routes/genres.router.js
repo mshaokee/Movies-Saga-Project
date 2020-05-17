@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
      title, description FROM genres
     JOIN relate ON genres.id = relate.genres_id
     JOIN movies ON movies.id = relate.movies_id;`
+    //query, send all the data needed to specify genre
     pool.query(queryString).then((result)=> {
         res.send(result.rows);
     }).catch((err)=> {

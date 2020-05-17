@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { HashRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
+//import pages to route through
 import Header from '../Header/Header';
 import Home from '../Home/Home';
 import Details from '../Details/Details';

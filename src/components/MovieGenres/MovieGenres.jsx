@@ -7,26 +7,27 @@ class MovieGenres extends Component {
         console.log('MovieGenres mounted', this.props.movieGenre);
     };//end componentDidMount
 
-    //if statement if this.props.reduxState.movie title = movietitle
 
     render() {
+        //set empty variable to display as a list for genres
         let specificGenre;
 
-        if(this.props.movieGenre.title === this.props.reduxState.selectMovie.title){
+        //if statement to set connect titles between both reducers
+        if (this.props.movieGenre.title === this.props.reduxState.selectMovie.title) {
             specificGenre = (
                 <li>{this.props.movieGenre.genrename}</li>
             )
-        }
+        };//end if statement
 
         return (
-            <>
+            <div>
                 {specificGenre}
-            </>
+            </div>
         );//end return
     };//end render
 };//end class
 
 
-const putStateOnProps = reduxState => ({reduxState});
+const putStateOnProps = reduxState => ({ reduxState });
 //connect
 export default connect(putStateOnProps)(MovieGenres);

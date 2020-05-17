@@ -24,6 +24,7 @@ router.get('/', (req, res) => {
 router.put('/:id', (req, res) => {
     //req.params.id will be the specified movie id, will change through SQL!
     //req.body is a object!
+    //set variables for simplicity
     let movieId = req.params.id;
     let movieTitle = req.body.title;
     let movieDesc = req.body.description;
@@ -34,6 +35,7 @@ router.put('/:id', (req, res) => {
     SET "title" = ($1), "description" = ($2)
     WHERE "id" = ($3)
     ;`;
+    //pool query, select using bling.
     pool.query(queryString, [movieTitle, movieDesc, movieId]).then((result) => {
         res.sendStatus(200);
     }).catch((error) => {

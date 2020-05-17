@@ -40,6 +40,7 @@ function* fetchMovies(action){
 function* editMovies(action){
     console.log('----------in editMovies', action.payload.id);
     try {
+        //set variables to simplify
         let id = action.payload.id
         let title = action.payload.title;
         let description = action.payload.description;
@@ -59,6 +60,7 @@ function* getGenres(action){
         const response = yield axios.get('/genres');
         //response.data will have all of the table columns from postico
         console.log('IN GET GENRES ---:', response.data); 
+        //send data to reducer
         yield put({
             type: 'SET_GENRES',
             payload: response.data
@@ -91,7 +93,7 @@ const genres = (state = [], action) => {
     }
 };//end genres
 
-// Used to put selected movie in display
+// Used to put selected movie in details
 const selectMovie = (state = [], action) => {
     console.log('in currentMovie reducer');
     // if statement to select specific movies, return movie data
@@ -101,9 +103,9 @@ const selectMovie = (state = [], action) => {
     return state;
 };//end currentMovie
 
+//Used to put selected genres in details
 const selectGenres = (state = [], action) => {
     console.log('in selectGenres reducer');
-    //if statement to select specific genre, similar to selectMovie
     if (action.type === 'current_genres'){
         return action.payload;
     }

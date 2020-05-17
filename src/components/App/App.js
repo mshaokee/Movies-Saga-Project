@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 //import pages to route through
 import Header from '../Header/Header';
@@ -18,17 +18,17 @@ class App extends Component {
   render() {
     return (
       <>
-        <HashRouter>
+        <BrowserRouter>
           <Header />
           {/* ROUTE MOVIES */}
           <Route exact path="/" component={Home} />
           <Route path="/details" component={Details} />
           <Route path="/edit" component={Edit} />
-        </HashRouter>
+        </BrowserRouter>
       </>
     );//end return
   };//end render
 };//end class
 
-
+//connect to redux
 export default connect()(App);

@@ -6,6 +6,7 @@ import './Edit.css';
 
 class Edit extends Component {
 
+    //create state to send using dispatch
     state = {
         id: this.props.reduxState.selectMovie.id,
         title: this.props.reduxState.selectMovie.title,
@@ -42,11 +43,6 @@ class Edit extends Component {
             type: 'current_movie',
             payload: this.state
         })
-        //i want to update genres as well
-        // this.props.dispatch({
-        //     type: 'current_genres',
-        //     payload: this.props.reduxState.selectGenres
-        // })
     };//end submit
 
     render() {
@@ -54,10 +50,10 @@ class Edit extends Component {
             <div className="container">
                 {/* TEST INPUT CHANGES */}
                 <div className="title">
-                    {JSON.stringify(this.state.title)}
+                    {/* {JSON.stringify(this.state.title)}
                     <div>
                         {JSON.stringify(this.state.description)}
-                    </div>
+                    </div> */}
                 </div>
                 <div>
                     <input onChange={this.changeTitle}
@@ -80,7 +76,7 @@ class Edit extends Component {
     };//end render
 };//end class
 
-
+//connect reduxState and display on DOM
 const putStateOnProps = reduxState => ({ reduxState });
 //connect
 export default connect(putStateOnProps)(Edit);

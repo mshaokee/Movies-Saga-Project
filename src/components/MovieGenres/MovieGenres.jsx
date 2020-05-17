@@ -33,6 +33,7 @@ class MovieGenres extends Component {
 };//end class
 
 
+//connect to reduxState and display on DOM
 const putStateOnProps = reduxState => ({ reduxState });
 //connect
 export default connect(putStateOnProps)(MovieGenres);

@@ -9,6 +9,7 @@ class Header extends Component {
         console.log('Header mounted');
     };//end componentDidMount
 
+    //redux function to check reduxState
     // checkRedux = () => {
     //     console.log('current reduxState:', this.props.reduxState);
     // };//end checkRedux
@@ -16,7 +17,6 @@ class Header extends Component {
     render() {
         return (
             <div>
-                
                 <h1 className="header">BLOCKBUSTER 2.0</h1>
                 {/* <button onClick={this.checkRedux}>Check Redux</button> */}
             </div>
@@ -24,7 +24,6 @@ class Header extends Component {
     };//end render
 };//end class
 
-// export default Header;
 
 const putStateOnProps = reduxState => ({ reduxState });
 //connect

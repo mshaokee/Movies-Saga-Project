@@ -12,8 +12,13 @@ class MovieGenres extends Component {
         //set empty variable to display as a list for genres
         let specificGenre;
 
-        //if statement to set connect titles between both reducers
+        //if statement to set connect titles between both reducers to display title/desc
         if (this.props.movieGenre.title === this.props.reduxState.selectMovie.title) {
+            specificGenre = (
+                <li>{this.props.movieGenre.genrename}</li>
+            )
+        } //secondary if statement to get the genres to redisplay
+        else if (this.props.movieGenre.movieid === this.props.reduxState.selectMovie.id){
             specificGenre = (
                 <li>{this.props.movieGenre.genrename}</li>
             )

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import MovieGenres from '../MovieGenres/MovieGenres';
+import {Button} from '@material-ui/core';
 
 
 class Details extends Component {
@@ -29,13 +30,13 @@ class Details extends Component {
                 {/* {JSON.stringify(this.props.reduxState.selectMovie)} */}
                 {/* {JSON.stringify(this.props.reduxState.genres)} */}
                 
-                <h1>Title of Movie: {this.props.reduxState.selectMovie.title}</h1>
-                <p>DESCRIPTION: {this.props.reduxState.selectMovie.description}</p>
-                <Link to="/"><button>Back to Movie List</button></Link>
-                <Link to="/edit"><button>Edit</button></Link>
+                <h1>{this.props.reduxState.selectMovie.title}</h1>
+                <p>{this.props.reduxState.selectMovie.description}</p>
+                <Link to="/"><Button>Back to Movie List</Button></Link>
+                <Link to="/edit"><Button>Edit</Button></Link>
                 <div>
                     {/* Loop through genres to display specific genres per movie */}
-                    <p>GENRES:</p> {this.props.reduxState.genres.map((genre, index) => {
+                    <h3>GENRES:</h3> {this.props.reduxState.genres.map((genre, index) => {
                         return (
                             <ul key={index}>
                                 <MovieGenres movieGenre={genre} />

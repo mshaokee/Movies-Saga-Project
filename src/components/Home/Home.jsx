@@ -21,7 +21,6 @@ class Home extends Component {
             <>
                 {/* Map through images */}
                 {/* DISPLAY IMAGE / DESCRIPTION / TITLE / IMAGE WILL LINK TO DETAILS */}
-                <h1>Home</h1>
                 {this.props.reduxState.movies.map((movie, index) =>
                     <div key={index}>
                         <SpecificMovie movie={movie} />

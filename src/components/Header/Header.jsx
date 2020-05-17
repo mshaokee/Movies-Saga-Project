@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Header extends Component {
 
-    componentDidMount(){
+    componentDidMount() {
         console.log('Header mounted');
     };//end componentDidMount
 
@@ -11,11 +11,11 @@ class Header extends Component {
     //     console.log('current reduxState:', this.props.reduxState);
     // };//end checkRedux
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
-            <h1>THE MOVIES</h1>
-            {/* <button onClick={this.checkRedux}>Check Redux</button> */}
+                <h1>BLOCKBUSTER 2.0</h1>
+                {/* <button onClick={this.checkRedux}>Check Redux</button> */}
             </div>
         );//end return
     };//end render
@@ -23,6 +23,6 @@ class Header extends Component {
 
 // export default Header;
 
-const putStateOnProps = reduxState => ({reduxState});
+const putStateOnProps = reduxState => ({ reduxState });
 //connect
 export default connect(putStateOnProps)(Header);

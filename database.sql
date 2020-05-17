@@ -55,3 +55,87 @@ VALUES
 ('Science Fiction'),
 ('Space-Opera'),
 ('Superhero');
+
+-- relate table to use join as needed
+CREATE TABLE "relate"
+(
+  "id" SERIAL PRIMARY KEY,
+  "movies_id" INT NOT NULL,
+  "genres_id" INT NOT NULL,
+  FOREIGN KEY (movies_id) REFERENCES movies(id),
+  FOREIGN KEY (genres_id) REFERENCES genres(id)
+);
+
+
+--movies that I have seen personally
+--avatar
+INSERT INTO "relate"
+  ("movies_id", "genres_id")
+VALUES
+  (1, 1),
+  (1, 7),
+  (1, 8),
+  (1, 11);
+--beauty and the beast
+INSERT INTO "relate"
+  ("movies_id", "genres_id")
+VALUES
+  ( 2, 6),
+  ( 2, 10);
+--captain marvel
+INSERT INTO "relate"
+  ("movies_id", "genres_id")
+VALUES
+  ( 3, 1),
+  ( 3, 7),
+  ( 3, 11),
+  ( 3, 13);
+--finding nemo
+INSERT INTO "relate"
+  ("movies_id", "genres_id")
+VALUES
+  (4, 2),
+  (4, 1);
+--harry potter
+INSERT INTO "relate"
+  ("movies_id", "genres_id")
+VALUES
+  (6, 1),
+  (6, 8);
+--monsters inc
+INSERT INTO "relate"
+  ("movies_id", "genres_id")
+VALUES
+  (9, 1),
+  (9, 2),
+  (9, 4),
+  (9, 11);
+--star wars
+INSERT INTO "relate"
+  ("movies_id", "genres_id")
+VALUES
+  (10, 1),
+  (10, 6),
+  (10, 11),
+  (10, 13);
+--the social network
+INSERT INTO "relate"
+  ("movies_id", "genres_id")
+VALUES
+  (12, 3);
+--titanic
+INSERT INTO "relate"
+  ("movies_id", "genres_id")
+VALUES
+  (13, 3),
+  (13, 5),
+  (13, 10);
+--toy story
+INSERT INTO "relate"
+  ("movies_id", "genres_id")
+VALUES
+  (14, 1),
+  (14, 2),
+  (14, 4),
+  (14, 13);
+

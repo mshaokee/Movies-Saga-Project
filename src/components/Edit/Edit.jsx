@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core'
 
 class Edit extends Component {
 
@@ -67,8 +68,8 @@ class Edit extends Component {
                         defaultValue={this.props.reduxState.selectMovie.description}
                     />
                 </div>
-                <Link to="/details"><button>CANCEL</button></Link>
-                <Link to="/details"><button onClick={this.submit}>SUBMIT CHANGES</button></Link>
+                <Link to="/details"><Button>CANCEL</Button></Link>
+                <Link to="/details"><Button onClick={this.submit}>SUBMIT CHANGES</Button></Link>
             </>
         );//end return
     };//end render

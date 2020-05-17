@@ -11,7 +11,7 @@ class Edit extends Component {
     }
 
     componentDidMount() {
-        console.log('Edit mounted', this.props.reduxState.selectMovie);
+        console.log('Edit mounted');
     };//end componentDidMount
 
     changeTitle = (event) => {
@@ -57,7 +57,7 @@ class Edit extends Component {
                     />
                 </div>
                 <Link to="/details"><button>CANCEL</button></Link>
-                <button onClick={this.submit}>SUBMIT CHANGES</button>
+                <Link to="/details"><button onClick={this.submit}>SUBMIT CHANGES</button></Link>
             </>
         );//end return
     };//end render

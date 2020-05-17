@@ -15,6 +15,10 @@ class Details extends Component {
         })
     };//end componentDidMount
 
+    displayDetails = () => {
+        
+    };//end displayDetails
+
 
     render() {
 
@@ -24,7 +28,7 @@ class Details extends Component {
                 {/* TEST WITH JSON */}
                 {/* {JSON.stringify(this.props.reduxState.selectMovie)} */}
                 {/* {JSON.stringify(this.props.reduxState.genres)} */}
-
+                
                 <h1>Title of Movie: {this.props.reduxState.selectMovie.title}</h1>
                 <p>DESCRIPTION: {this.props.reduxState.selectMovie.description}</p>
                 <Link to="/"><button>Back to Movie List</button></Link>

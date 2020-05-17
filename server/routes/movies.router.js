@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     let queryString = `
     SELECT "id", "title", "poster", "description" 
     FROM "movies" 
-    ORDER BY "title" ASC;`;
+    ORDER BY "id" ASC;`;
     pool.query(queryString).then((result) => {
         res.send(result.rows);
     }).catch((err) => {

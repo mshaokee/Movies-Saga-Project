@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class MovieGenres extends Component {
 
     componentDidMount() {
-        console.log('MovieGenres mounted', this.props.movieGenre);
+        console.log('MovieGenres mounted');
     };//end componentDidMount
 
 

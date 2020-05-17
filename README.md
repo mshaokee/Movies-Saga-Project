@@ -24,7 +24,7 @@ During this project I had to correctly set up my GET routers and PUT router, set
 
 ## Installation
 Here is my todo.md that lays out the steps of completing this project.
-[To Do Steps](https://github.com/mshaokee/movie-sagas/blob/master/INSTRUCTIONS.md)
+[To Do Steps](https://github.com/mshaokee/movie-sagas/blob/master/TODO.md)
 
 ## Acknowledgement
 Thanks to Prime Digital Academy and my cohort Lamport for their support and guidance. 

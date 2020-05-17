@@ -30,10 +30,21 @@ class Edit extends Component {
 
     submit = () => {
         console.log('Submitting from Edit');
+        //send our updates to our saga
         this.props.dispatch({
             type: 'EDIT_MOVIES',
             payload: this.state
         })
+        //this is to update our details 
+        this.props.dispatch({
+            type: 'current_movie',
+            payload: this.state
+        })
+        //i want to update genres as well
+        // this.props.dispatch({
+        //     type: 'current_genres',
+        //     payload: this.props.reduxState.selectGenres
+        // })
     };//end submit
 
     render() {

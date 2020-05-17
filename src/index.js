@@ -101,12 +101,22 @@ const selectMovie = (state = [], action) => {
     return state;
 };//end currentMovie
 
+const selectGenres = (state = [], action) => {
+    console.log('in selectGenres reducer');
+    //if statement to select specific genre, similar to selectMovie
+    if (action.type === 'current_genres'){
+        return action.payload;
+    }
+    return state;
+}
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
-        selectMovie
+        selectMovie,
+        selectGenres
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),

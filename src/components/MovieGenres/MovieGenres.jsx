@@ -5,20 +5,22 @@ class MovieGenres extends Component {
 
     componentDidMount() {
         console.log('MovieGenres mounted');
-
+        // this.props.dispatch({
+        //     type: 'current_genres',
+        //     payload: this.props.movieGenre
+        // })
     };//end componentDidMount
 
     render() {
         return (
             <>
-                <li>{this.props.movieGenre.genrename}</li>
+                <li>{this.props.reduxState.selectGenres.genrename}</li>
             </>
         );//end return
     };//end render
 };//end class
 
-// export default Genres;
 
-// const putStateOnProps = reduxState => ({reduxState});
+const putStateOnProps = reduxState => ({reduxState});
 //connect
-export default connect()(MovieGenres);
+export default connect(putStateOnProps)(MovieGenres);

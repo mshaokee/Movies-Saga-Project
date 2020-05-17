@@ -7,7 +7,11 @@ import MovieGenres from '../MovieGenres/MovieGenres';
 class Details extends Component {
 
     componentDidMount() {
-        console.log('---------------Details mounted', this.props.reduxState.genres);
+        console.log('---------------Details mounted');
+        this.props.dispatch({
+            type: 'current_genres',
+            payload: this.props.reduxState.genres
+        })
     };//end componentDidMount
 
 

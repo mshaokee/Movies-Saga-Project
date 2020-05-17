@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 class SpecificMovie extends Component {
 
     componentDidMount() {
-        console.log('SpecificMovie mounted');
+        console.log('SpecificMovie mounted', this.props.reduxState.genres);
     };//end componentDidMount
 
     handleClick = () => {
@@ -12,6 +12,10 @@ class SpecificMovie extends Component {
         this.props.dispatch({
             type: 'current_movie',
             payload: this.props.movie
+        })
+        this.props.dispatch({
+            type: 'current_genres',
+            payload: this.props.reduxState.genres
         })
     };//end handleClick
 

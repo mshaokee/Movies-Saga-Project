@@ -5,10 +5,6 @@ class MovieGenres extends Component {
 
     componentDidMount() {
         console.log('MovieGenres mounted', this.props.movieGenre);
-        // this.props.dispatch({
-        //     type: 'current_genres',
-        //     payload: this.props.movieGenre
-        // })
     };//end componentDidMount
 
     //if statement if this.props.reduxState.movie title = movietitle
@@ -16,12 +12,12 @@ class MovieGenres extends Component {
     render() {
         let specificGenre;
 
-        if(this.props.movieGenre.title == this.props.reduxState.selectMovie.title){
+        if(this.props.movieGenre.title === this.props.reduxState.selectMovie.title){
             specificGenre = (
                 <li>{this.props.movieGenre.genrename}</li>
             )
         }
-        
+
         return (
             <>
                 {specificGenre}

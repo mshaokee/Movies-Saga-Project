@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
+import './SpecificMovie.css';
 class SpecificMovie extends Component {
 
     componentDidMount() {
@@ -21,13 +22,16 @@ class SpecificMovie extends Component {
         return (
             <>
                 {/* Display movie title, image poster, alt description */}
-                <div>
+                <div className="movies">
                     <h3>{this.props.movie.title}</h3>
+                    <div className="poster">
                     <Link to="/details"><img
                         onClick={this.handleClick}
                         src={this.props.movie.poster}
                         alt={this.props.movie.description}/>
                     </Link>
+                    <div className="edit">EDIT</div>
+                    </div>
                     <p>{this.props.movie.description}</p>
                 </div>
                 

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import './Header.css';
+// import {Button} from '@material-ui/core';
 
 class Header extends Component {
 
@@ -14,7 +16,8 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <h1>BLOCKBUSTER 2.0</h1>
+                
+                <h1 className="header">BLOCKBUSTER 2.0</h1>
                 {/* <button onClick={this.checkRedux}>Check Redux</button> */}
             </div>
         );//end return

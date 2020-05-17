@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import MovieGenres from '../MovieGenres/MovieGenres';
 import {Button} from '@material-ui/core';
+import './Details.css';
 
 
 class Details extends Component {

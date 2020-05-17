@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SpecificMovie from '../SpecificMovie/SpecificMovie';
 
+
+
 class Home extends Component {
 
     componentDidMount() {
@@ -22,7 +24,7 @@ class Home extends Component {
                 {/* Map through images */}
                 {/* DISPLAY IMAGE / DESCRIPTION / TITLE / IMAGE WILL LINK TO DETAILS */}
                 {this.props.reduxState.movies.map((movie, index) =>
-                    <div key={index}>
+                    <div className="movieList" key={index}>
                         <SpecificMovie movie={movie} />
                     </div>
                 )};

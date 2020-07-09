@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import SpecificMovie from '../SpecificMovie/SpecificMovie';
 
-
-
 class Home extends Component {
 
     componentDidMount() {
@@ -27,7 +25,7 @@ class Home extends Component {
                     <div className="movieList" key={index}>
                         <SpecificMovie movie={movie} />
                     </div>
-                )};
+                )}
             </>
         );//end return
     };//end render
